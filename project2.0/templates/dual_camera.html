@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dual Camera Feed</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        img {
+            border: 2px solid #444;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Feed from Two Cameras</h1>
+    <div class="video-container">
+        <div>
+            <h3>Camera 1</h3>
+            <img src="{{ url_for('video_feed1') }}" width="480" height="360">
+        </div>
+        <div>
+            <h3>Camera 2</h3>
+            <img src="{{ url_for('video_feed2') }}" width="480" height="360">
+        </div>
+    </div>
+</body>
+</html>
